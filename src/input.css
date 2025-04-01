@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Utiliser une couche personnalisée pour surcharger les styles de base */
+@layer base {
+  button,
+  input[type='button'],
+  input[type='reset'],
+  input[type='submit'] {
+    appearance: button !important; /* Ajoute la propriété standard avec !important pour forcer la surcharge */
+    -webkit-appearance: button; /* Assure la compatibilité avec les anciens navigateurs */
+  }
+  input[type='search'] {
+    appearance: textfield !important; /* Ajoute la propriété standard */
+    -webkit-appearance: textfield;
+  }
+
+}
